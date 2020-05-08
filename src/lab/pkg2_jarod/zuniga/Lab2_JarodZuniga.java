@@ -193,10 +193,95 @@ public class Lab2_JarodZuniga {
                                 break;
                             case 3:
                                 System.out.println("Modificar casa ");
-                                
-                                
-                                
-                                
+                                ArrayList todas = new ArrayList();
+                                for (Object o : caslis) {
+                                    todas.add(o);
+                                }
+
+                                for (Object o : cascon) {
+                                    todas.add(o);
+                                }
+
+                                for (Object o : casesp) {
+                                    todas.add(o);
+                                }
+
+                                for (Object o : casdem) {
+                                    todas.add(o);
+                                }
+                                for (Object p : todas) {
+                                    System.out.println(p);
+                                }
+                                System.out.println("Ingrese la poscicion que desea modificar");
+                                int mod = sc.nextInt();
+                                System.out.println("1. numero de casa\n 2. numero de bloque\n 3.color\n 4.largo\n 5.ancho\n 6.comprada\n 7.numeros de pisos\n 8. numperos de baños\n 9.numero de cuartos\n 10.dueño\n 11.ingeniero encargado");
+                                System.out.println("Ingrese lo que dese modificar");
+                                int modi = sc.nextInt();
+                                switch (modi) {
+                                    case 1:
+                                        System.out.println("Ingrese nuevo dato");
+                                        int dat = sc.nextInt();
+                                        ((casas) todas.get(mod)).setNum_casa(dat);
+                                        break;
+                                    case 2:
+                                        System.out.println("Ingrese nuevo dato");
+                                        dat = sc.nextInt();
+                                        ((casas) todas.get(mod)).setNum_bloque(dat);
+                                        break;
+                                    case 3:
+                                        System.out.println("Ingrese nuevo dato");
+                                        String dt = sc.next();
+                                        ((casas) todas.get(mod)).setColor(dt);
+                                        break;
+                                    case 4:
+                                        System.out.println("Ingrese nuevo dato");
+                                        dat = sc.nextInt();
+                                        ((casas) todas.get(mod)).setLargo(dat);
+                                        break;
+                                    case 5:
+                                        System.out.println("Ingrese nuevo dato");
+                                        dat = sc.nextInt();
+                                        ((casas) todas.get(mod)).setAncho(dat);
+                                        break;
+                                    case 6:
+                                        boolean tr=((casas) todas.get(mod)).getComprada();
+                                        if (tr== true) {
+                                            tr=false;
+                                        }else{
+                                            tr=true;
+                                        }
+                                        System.out.println("Cabiando dato......");
+                                        ((casas) todas.get(mod)).setComprada(tr);
+                                        break;
+                                    case 7:
+                                         System.out.println("Ingrese nuevo dato");
+                                        dat = sc.nextInt();
+                                        ((casas) todas.get(mod)).setNum_pisos(dat);
+                                        break;
+                                    case 8:
+                                        System.out.println("Ingrese nuevo dato");
+                                        dat = sc.nextInt();
+                                        ((casas) todas.get(mod)).setNum_baños(dat);
+                                        break;
+                                    case 9:
+                                        System.out.println("Ingrese nuevo dato");
+                                        dat = sc.nextInt();
+                                        ((casas) todas.get(mod)).setNum_cuartos(dat);
+                                        break;
+                                    case 10:
+                                        System.out.println("Ingrese nuevo dato");
+                                        dt = sc.next();
+                                        ((casas) todas.get(mod)).setDueño(dt);
+                                        break;
+                                    case 11:
+                                        System.out.println("Ingrese nuevo dato");
+                                        dt = sc.next();
+                                        ((casas) todas.get(mod)).setIngcargo(dt);
+                                        break;
+                                    default:
+                                        System.out.println("Entrada incorrecta");
+                                        break;
+                                }
                                 break;
                             case 4:
                                 System.out.println("Casas listas");
@@ -281,7 +366,7 @@ public class Lab2_JarodZuniga {
                         for (Object o : casdem) {
                             System.out.println(o);
                         }
-                        System.out.println("ingrese la seccion a la cual desea cambiar de estado (1-4)\n"+"1. cambiar estado de casa listas \n"+ "2.Cambiar casas en construccion \n"+ "3. Cambiar casa de contruccion en espera");
+                        System.out.println("ingrese la seccion a la cual desea cambiar de estado (1-4)\n" + "1. cambiar estado de casa listas \n" + "2.Cambiar casas en construccion \n" + "3. Cambiar casa de contruccion en espera");
                         int cbe = sc.nextInt();
                         int pce = 0;
                         switch (cbe) {
@@ -318,7 +403,7 @@ public class Lab2_JarodZuniga {
                                 } else {
                                     System.out.println("Valir ingresado incorrecto ");
                                 }
-                                
+
                                 break;
                             case 3:
                                 System.out.println("casas con construccion en espera");
@@ -337,7 +422,7 @@ public class Lab2_JarodZuniga {
                                     System.out.println(o);
                                 }
                                 System.out.println("Ingrese la poscicion de las casas que desea demoler");
-                                pce=sc.nextInt();
+                                pce = sc.nextInt();
                                 System.out.println("demoliendo casa....");
                                 casdem.remove(pce);
                                 break;
