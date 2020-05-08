@@ -102,8 +102,8 @@ public class Lab2_JarodZuniga {
                                  num_baños,
                                  num_cuartos;
                                 String color,
-                                 dueño="",
-                                 estado="",
+                                 dueño = "",
+                                 estado = "",
                                  ingcargo;
                                 boolean comprada;
                                 System.out.println("Ingrese el numero de la casa");
@@ -143,53 +143,119 @@ public class Lab2_JarodZuniga {
                                     } else if (sel == 2) {
                                         if (c > 5) {
                                             System.out.println("No se puede agregar mas casa en contruccion");
-                                            sel=9;
+                                            sel = 9;
                                         } else {
                                             estado = "En contruccion";
                                             c++;
                                         }
-                                    }else if (sel==3){
-                                        estado="construccion en espera";
-                                    }else if (sel==4){
-                                        if (d>3) {
+                                    } else if (sel == 3) {
+                                        estado = "construccion en espera";
+                                    } else if (sel == 4) {
+                                        if (d > 3) {
                                             System.out.println("No se pueden agregar mas casas a espera de demolicion");
-                                        }else{
-                                            estado="Espera de demolicion";
+                                        } else {
+                                            estado = "Espera de demolicion";
                                             d++;
                                         }
                                     }
                                 }
                                 System.out.println("Ingrese el nombre del ingeniero a cargo");
-                                ingcargo=sc.next();
-                                
+                                ingcargo = sc.next();
+
                                 if ("Lista".equals(estado)) {
                                     caslis.add(new casas(num_casa, num_bloque, color, largo, ancho, comprada, num_pisos, num_baños, num_cuartos, dueño, estado, ingcargo));
-                                }else if ("En contruccion".equals(estado)){
+                                } else if ("En contruccion".equals(estado)) {
                                     cascon.add(new casas(num_casa, num_bloque, color, largo, ancho, comprada, num_pisos, num_baños, num_cuartos, dueño, estado, ingcargo));
-                                }else if ("construccion en espera".equals(estado)){
+                                } else if ("construccion en espera".equals(estado)) {
                                     casesp.add(new casas(num_casa, num_bloque, color, largo, ancho, comprada, num_pisos, num_baños, num_cuartos, dueño, estado, ingcargo));
-                                }else if ("Espera de demolicion".equals(estado)){
+                                } else if ("Espera de demolicion".equals(estado)) {
                                     casdem.add(new casas(num_casa, num_bloque, color, largo, ancho, comprada, num_pisos, num_baños, num_cuartos, dueño, estado, ingcargo));
                                 }
 
                                 break;
                             case 2:
+                                System.out.println("Casas listas");
                                 for (Object o : caslis) {
                                     System.out.println(o);
                                 }
+                                System.out.println("casas en construccion");
                                 for (Object o : cascon) {
                                     System.out.println(o);
                                 }
+                                System.out.println("casas con construccion en espera");
                                 for (Object o : casesp) {
                                     System.out.println(o);
                                 }
+                                System.out.println("casas en espera de demolicion");
                                 for (Object o : casdem) {
                                     System.out.println(o);
                                 }
                                 break;
                             case 3:
+                                System.out.println("Modificar casa ");
+                                
+                                
+                                
+                                
                                 break;
                             case 4:
+                                System.out.println("Casas listas");
+                                for (Object o : caslis) {
+                                    System.out.println(o);
+                                }
+                                System.out.println("casas en construccion");
+                                for (Object o : cascon) {
+                                    System.out.println(o);
+                                }
+                                System.out.println("casas con construccion en espera");
+                                for (Object o : casesp) {
+                                    System.out.println(o);
+                                }
+                                System.out.println("casas en espera de demolicion");
+                                for (Object o : casdem) {
+                                    System.out.println(o);
+                                }
+                                System.out.println("Ingrese que tipo de casa desea eliminar (1-4)");
+                                int el = sc.nextInt();
+                                int po;
+                                switch (el) {
+                                    case 1:
+                                        System.out.println("Casas listas");
+                                        for (Object o : caslis) {
+                                            System.out.println(o);
+                                        }
+                                        System.out.println("Seleccione la poscicion que desea eliminar");
+                                        po = sc.nextInt();
+                                        caslis.remove(po);
+                                        break;
+                                    case 2:
+                                        System.out.println("casas en construccion");
+                                        for (Object o : cascon) {
+                                            System.out.println(o);
+                                        }
+                                        System.out.println("Seleccione la poscicion que desea eliminar");
+                                        po = sc.nextInt();
+                                        cascon.remove(po);
+                                        break;
+                                    case 3:
+                                        System.out.println("casas con construccion en espera");
+                                        for (Object o : casesp) {
+                                            System.out.println(o);
+                                        }
+                                        System.out.println("Seleccione la poscicion que desea eliminar");
+                                        po = sc.nextInt();
+                                        casesp.remove(po);
+                                        break;
+                                    case 4:
+                                        System.out.println("casas en espera de demolicion");
+                                        for (Object o : casdem) {
+                                            System.out.println(o);
+                                        }
+                                        System.out.println("Seleccione la poscicion que desea eliminar");
+                                        po = sc.nextInt();
+                                        casdem.remove(po);
+                                        break;
+                                }
                                 break;
                             default:
                                 System.out.println("Opcion ingresada invalida");
@@ -197,7 +263,88 @@ public class Lab2_JarodZuniga {
                         }
                         break;
                     case 2:
-
+                        System.out.println("Manejo de estados ");
+                        System.out.println("");
+                        System.out.println("Casas listas");
+                        for (Object o : caslis) {
+                            System.out.println(o);
+                        }
+                        System.out.println("casas en construccion");
+                        for (Object o : cascon) {
+                            System.out.println(o);
+                        }
+                        System.out.println("casas con construccion en espera");
+                        for (Object o : casesp) {
+                            System.out.println(o);
+                        }
+                        System.out.println("casas en espera de demolicion");
+                        for (Object o : casdem) {
+                            System.out.println(o);
+                        }
+                        System.out.println("ingrese la seccion a la cual desea cambiar de estado (1-4)\n"+"1. cambiar estado de casa listas \n"+ "2.Cambiar casas en construccion \n"+ "3. Cambiar casa de contruccion en espera");
+                        int cbe = sc.nextInt();
+                        int pce = 0;
+                        switch (cbe) {
+                            case 1:
+                                System.out.println("Casas listas");
+                                for (Object o : caslis) {
+                                    System.out.println(o);
+                                }
+                                System.out.println("Ingrese la posicion a cambiar de estado");
+                                pce = sc.nextInt();
+                                casdem.add(caslis.get(pce));
+                                caslis.remove(pce);
+                                System.out.println("Cambio de estado exitoso");
+                                System.out.println("Casas listas");
+                                for (Object o : caslis) {
+                                    System.out.println(o);
+                                }
+                                break;
+                            case 2:
+                                System.out.println("casas en construccion");
+                                for (Object o : cascon) {
+                                    System.out.println(o);
+                                }
+                                System.out.println("Ingrese la posicion a cambiar de estado");
+                                pce = sc.nextInt();
+                                System.out.println("1. cambiar a lista\n" + "2.cambiar a espera");
+                                int cab = sc.nextInt();
+                                if (cab == 1) {
+                                    caslis.add(cascon.get(pce));
+                                    cascon.remove(pce);
+                                } else if (cab == 2) {
+                                    casesp.add(cascon.get(pce));
+                                    cascon.remove(pce);
+                                } else {
+                                    System.out.println("Valir ingresado incorrecto ");
+                                }
+                                
+                                break;
+                            case 3:
+                                System.out.println("casas con construccion en espera");
+                                for (Object o : casesp) {
+                                    System.out.println(o);
+                                }
+                                System.out.println("Ingrese la posicion a cambiar de estado");
+                                pce = sc.nextInt();
+                                cascon.add(casesp.get(pce));
+                                casesp.remove(pce);
+                                break;
+                            case 4:
+                                System.out.println("Demoler casa");
+                                System.out.println("casas en espera de demolicion");
+                                for (Object o : casdem) {
+                                    System.out.println(o);
+                                }
+                                System.out.println("Ingrese la poscicion de las casas que desea demoler");
+                                pce=sc.nextInt();
+                                System.out.println("demoliendo casa....");
+                                casdem.remove(pce);
+                                break;
+                            default:
+                                System.out.println("La opcion no es parte de los estados");
+                                break;
+                        }
                         break;
                     case 3:
                         System.out.println("Gracias por usar el programa");

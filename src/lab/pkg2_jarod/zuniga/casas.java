@@ -135,7 +135,7 @@ public class casas {
 
     @Override
     public String toString() {
-        return "num_casa=" + num_casa + ", num_bloque=" + num_bloque + ", color=" + color + ", largo=" + largo + ", ancho=" + ancho + ", comprada=" + comprada + ", num_pisos=" + num_pisos + ", num_ba\u00f1os=" + num_baños + ", num_cuartos=" + num_cuartos + ", due\u00f1o=" + dueño + ", estado=" + estado + ", ingcargo=" + ingcargo;
+        return "numero de casa=" + num_casa + ", numero de bloque=" + num_bloque + ", color=" + color + ", largo=" + largo + ", ancho=" + ancho + ", comprada=" + comprada + ", numeros de pisos=" + num_pisos + ", numperos de baños=" + num_baños + ", numero de cuartos=" + num_cuartos + ", dueño=" + dueño + ", estado=" + estado + ", ingeniero encargado=" + ingcargo;
     }
     
     
