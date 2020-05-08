@@ -11,7 +11,7 @@ public class casas {
     private String color;
     private int largo;
     private int ancho;
-    private double comprada;
+    private boolean comprada;
     private int num_pisos;
     private int num_baños;
     private int num_cuartos;
@@ -22,7 +22,7 @@ public class casas {
     public casas() {
     }
 
-    public casas(int num_casa, int num_bloque, String color, int largo, int ancho, double comprada, int num_pisos, int num_baños, int num_cuartos, String dueño, String estado, String ingcargo) {
+    public casas(int num_casa, int num_bloque, String color, int largo, int ancho, boolean comprada, int num_pisos, int num_baños, int num_cuartos, String dueño, String estado, String ingcargo) {
         this.num_casa = num_casa;
         this.num_bloque = num_bloque;
         this.color = color;
@@ -77,11 +77,11 @@ public class casas {
         this.ancho = ancho;
     }
 
-    public double getComprada() {
+    public boolean getComprada() {
         return comprada;
     }
 
-    public void setComprada(double comprada) {
+    public void setComprada(boolean comprada) {
         this.comprada = comprada;
     }
 
