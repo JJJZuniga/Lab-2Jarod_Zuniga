@@ -15,7 +15,9 @@ public class Lab2_JarodZuniga {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("Bienvenido a nuestro inventario de casas");
+        System.out.println("");
+        System.out.println("");
     }
     
 }
