@@ -24,7 +24,7 @@ public class Lab2_JarodZuniga {
         ArrayList cascon = new ArrayList();
         ArrayList casesp = new ArrayList();
         ArrayList casdem = new ArrayList();
-        int v = 0;
+        int v = 0, c = 0, d = 0;
         int opcion = 0;
         user.add(new Personas("Leonardo", "leobanegas", "99"));
         int reg = 0;
@@ -102,38 +102,90 @@ public class Lab2_JarodZuniga {
                                  num_baños,
                                  num_cuartos;
                                 String color,
-                                 dueño,
-                                 estado,
+                                 dueño="",
+                                 estado="",
                                  ingcargo;
                                 boolean comprada;
                                 System.out.println("Ingrese el numero de la casa");
-                                num_casa=sc.nextInt();
+                                num_casa = sc.nextInt();
                                 System.out.println("Ingrese el numero del bloque");
-                                num_bloque=sc.nextInt();
+                                num_bloque = sc.nextInt();
                                 System.out.println("Ingrese el color de la casa");
-                                color=sc.next();
+                                color = sc.next();
                                 System.out.println("Ingrese el largo de la casa");
-                                largo=sc.nextInt();
+                                largo = sc.nextInt();
                                 System.out.println("ingrese e ancho de la casa");
-                                ancho=sc.nextInt();
+                                ancho = sc.nextInt();
                                 System.out.println("la casa esta comprada? s/n");
-                                char co=sc.next().charAt(0);
-                                if (co=='s'||co=='S') {
-                                    comprada=true;
+                                char co = sc.next().charAt(0);
+                                if (co == 's' || co == 'S') {
+                                    comprada = true;
+                                    System.out.println("Ingrese el nombre del dueño");
+                                    dueño = sc.next();
+                                } else {
+                                    comprada = false;
                                 }
-                                
-                                System.out.println("Ingrese el nombre del dueño");
                                 System.out.println("Ingree la cantidada de pisos");
+                                num_pisos = sc.nextInt();
                                 System.out.println("Ingrese la cantidad de baños");
-                                System.out.println("Ingrese la cantidad de cuartos");
+                                num_baños = sc.nextInt();
 
-                                System.out.println("LISTAS.\n" + "CONSTRUCCION\n"
-                                        + "CONSTRUCCION EN ESPERA.\n"
-                                        + "ESPERA DE DEMOLICION.");
+                                System.out.println("Ingrese la cantidad de cuartos");
+                                num_cuartos = sc.nextInt();
+                                int sel = 0;
+                                while (sel > 4 || sel < 1) {
+                                    System.out.println("1. LISTAS.\n" + "2. CONSTRUCCION\n"
+                                            + "3. CONSTRUCCION EN ESPERA.\n"
+                                            + "4. ESPERA DE DEMOLICION.");
+                                    sel = sc.nextInt();
+                                    if (sel == 1) {
+                                        estado = "Lista";
+                                    } else if (sel == 2) {
+                                        if (c > 5) {
+                                            System.out.println("No se puede agregar mas casa en contruccion");
+                                            sel=9;
+                                        } else {
+                                            estado = "En contruccion";
+                                            c++;
+                                        }
+                                    }else if (sel==3){
+                                        estado="construccion en espera";
+                                    }else if (sel==4){
+                                        if (d>3) {
+                                            System.out.println("No se pueden agregar mas casas a espera de demolicion");
+                                        }else{
+                                            estado="Espera de demolicion";
+                                            d++;
+                                        }
+                                    }
+                                }
                                 System.out.println("Ingrese el nombre del ingeniero a cargo");
+                                ingcargo=sc.next();
+                                
+                                if ("Lista".equals(estado)) {
+                                    caslis.add(new casas(num_casa, num_bloque, color, largo, ancho, comprada, num_pisos, num_baños, num_cuartos, dueño, estado, ingcargo));
+                                }else if ("En contruccion".equals(estado)){
+                                    cascon.add(new casas(num_casa, num_bloque, color, largo, ancho, comprada, num_pisos, num_baños, num_cuartos, dueño, estado, ingcargo));
+                                }else if ("construccion en espera".equals(estado)){
+                                    casesp.add(new casas(num_casa, num_bloque, color, largo, ancho, comprada, num_pisos, num_baños, num_cuartos, dueño, estado, ingcargo));
+                                }else if ("Espera de demolicion".equals(estado)){
+                                    casdem.add(new casas(num_casa, num_bloque, color, largo, ancho, comprada, num_pisos, num_baños, num_cuartos, dueño, estado, ingcargo));
+                                }
 
                                 break;
                             case 2:
+                                for (Object o : caslis) {
+                                    System.out.println(o);
+                                }
+                                for (Object o : cascon) {
+                                    System.out.println(o);
+                                }
+                                for (Object o : casesp) {
+                                    System.out.println(o);
+                                }
+                                for (Object o : casdem) {
+                                    System.out.println(o);
+                                }
                                 break;
                             case 3:
                                 break;
