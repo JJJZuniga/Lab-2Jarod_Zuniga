@@ -219,27 +219,27 @@ public class Lab2_JarodZuniga {
                                 int modi = sc.nextInt();
                                 switch (modi) {
                                     case 1:
-                                        System.out.println("Ingrese nuevo dato");
+                                        System.out.println("Ingrese nuevo dato para numero de casa");
                                         int dat = sc.nextInt();
                                         ((casas) todas.get(mod)).setNum_casa(dat);
                                         break;
                                     case 2:
-                                        System.out.println("Ingrese nuevo dato");
+                                        System.out.println("Ingrese nuevo dato para numero de bloque");
                                         dat = sc.nextInt();
                                         ((casas) todas.get(mod)).setNum_bloque(dat);
                                         break;
                                     case 3:
-                                        System.out.println("Ingrese nuevo dato");
+                                        System.out.println("Ingrese nuevo dato para color");
                                         String dt = sc.next();
                                         ((casas) todas.get(mod)).setColor(dt);
                                         break;
                                     case 4:
-                                        System.out.println("Ingrese nuevo dato");
+                                        System.out.println("Ingrese nuevo dato para largo");
                                         dat = sc.nextInt();
                                         ((casas) todas.get(mod)).setLargo(dat);
                                         break;
                                     case 5:
-                                        System.out.println("Ingrese nuevo dato");
+                                        System.out.println("Ingrese nuevo dato para ancho");
                                         dat = sc.nextInt();
                                         ((casas) todas.get(mod)).setAncho(dat);
                                         break;
@@ -250,31 +250,31 @@ public class Lab2_JarodZuniga {
                                         }else{
                                             tr=true;
                                         }
-                                        System.out.println("Cabiando dato......");
+                                        System.out.println("Cabiando dato...... de comprado");
                                         ((casas) todas.get(mod)).setComprada(tr);
                                         break;
                                     case 7:
-                                         System.out.println("Ingrese nuevo dato");
+                                         System.out.println("Ingrese nuevo dato de numero de pisos");
                                         dat = sc.nextInt();
                                         ((casas) todas.get(mod)).setNum_pisos(dat);
                                         break;
                                     case 8:
-                                        System.out.println("Ingrese nuevo dato");
+                                        System.out.println("Ingrese nuevo dato de numero de baños");
                                         dat = sc.nextInt();
                                         ((casas) todas.get(mod)).setNum_baños(dat);
                                         break;
                                     case 9:
-                                        System.out.println("Ingrese nuevo dato");
+                                        System.out.println("Ingrese nuevo dato de numero de cuartos");
                                         dat = sc.nextInt();
                                         ((casas) todas.get(mod)).setNum_cuartos(dat);
                                         break;
                                     case 10:
-                                        System.out.println("Ingrese nuevo dato");
+                                        System.out.println("Ingrese nuevo dato para dueño");
                                         dt = sc.next();
                                         ((casas) todas.get(mod)).setDueño(dt);
                                         break;
                                     case 11:
-                                        System.out.println("Ingrese nuevo dato");
+                                        System.out.println("Ingrese nuevo dato para ingeniero encargado");
                                         dt = sc.next();
                                         ((casas) todas.get(mod)).setIngcargo(dt);
                                         break;
